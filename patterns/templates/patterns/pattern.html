@@ -1,0 +1,20 @@
+Page title: {{title}}
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1><a href="/"> Home </a></h1>
+<br>
+<br>
+<br>
+Pattern name: {{pattern.name}}
+<br>
+Pattern description: {{pattern.description}}
+
+<br>
+<br>
+Tags:<br> |
+{% for tag in pattern.tags.all %}
+<a href='/tag/{{tag.id}}'> {{tag.name}} </a> |
+{% endfor %}

@@ -16,7 +16,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from patterns import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', views.IndexView.as_view()),
+    url(r'^pattern/(?P<id>.+)', views.PatternView.as_view()),
+    url(r'^tag/(?P<id>.+)', views.TagView.as_view()),
 ]

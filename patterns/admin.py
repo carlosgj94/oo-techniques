@@ -1,3 +1,6 @@
 from django.contrib import admin
+from patterns.models import *
 
-# Register your models here.
+
+admin.site.register(Pattern)
+admin.site.register(Tag)
