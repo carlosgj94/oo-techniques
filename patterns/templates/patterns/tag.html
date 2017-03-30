@@ -1,3 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>{{ title }}</title>
+    {% load staticfiles %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'patterns/css/index.css' %}" />
+
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+
 <h1><a href="/"> Home </a></h1>
 <br>
 <br>
@@ -6,3 +22,6 @@
 {% for pattern in patterns %}
     <a href='/pattern/{{pattern.id}}'> {{pattern.name}} </a>
 {% endfor %}
+
+</body>
+</html>

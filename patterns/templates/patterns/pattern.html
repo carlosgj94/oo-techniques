@@ -1,3 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>{{ title }}</title>
+    {% load staticfiles %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'patterns/css/index.css' %}" />
+
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+
 Page title: {{title}}
 <br>
 <br>
@@ -18,3 +34,6 @@ Tags:<br> |
 {% for tag in pattern.tags.all %}
 <a href='/tag/{{tag.id}}'> {{tag.name}} </a> |
 {% endfor %}
+
+</body>
+</html>
