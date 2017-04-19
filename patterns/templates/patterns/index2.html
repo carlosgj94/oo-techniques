@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+ 
+    <!-- materialize -->
+		<!-- Compiled and minified CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+	<!-- Materialize end -->
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <title>{{ title }}</title>
+   {% load staticfiles %}
+
+   <link rel="stylesheet" type="text/css" href="{% static 'patterns/css/index.css' %}" />
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body>
+
+  <nav class="blue-c"  >
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo" id='lox'>Object Oriented Patterns</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li>
+      </ul>
+    </div>
+  </nav>
+
+   <div class="row">
+         <div class="col m2" >
+         	
+			<ul class="sidenav-d" style="height: 488px;" >
+			<!--	<li><a href="index.html">Overview</a></li>-->
+				<li>
+	              <a href="#" class="has-child open">Patterns</a>
+	              <ul style="display: block;">
+					{% for pattern in patterns %}
+					 <li><a href="pattern/{{pattern.id}}"> {{pattern}} </a></li>
+					{% endfor %}  
+	              </ul>
+	            </li>
+				<li>
+	              <a href="#" class="has-child open">Tags</a>
+	              <ul style="display: block;">
+					{% for tag in tags %}
+					 <li><a href="tag/{{tag.id}}"> {{tag.name}} </a></li>
+					{% endfor %}
+	              </ul>
+	            </li>
+
+			</ul>
+
+
+
+
+
+
+         </div>
+
+      <div class="col m10">
+      		
+      		<article class="col-lg-10 col-md-9 col-sm-9 main-content" role="main">
+          
+          <header>
+            <h1 class="hd">Page title</h1>
+            <p>All HTML headings, h1 through h6, are available. .h1 through .h6 classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.</p>
+            <ol class="toc">
+              <li>
+                <a href="#">First topic</a>
+                <ol>
+                  <li><a href="#">Sub topic 1</a></li>
+                  <li><a href="#">Sub topic 2</a></li>
+                </ol>
+              </li>
+              <li><a href="#">Second topic</a></li>
+              <li><a href="#">Third topic</a></li>
+              <li><a href="#">Fourth topic</a></li>
+            </ol>
+          </header>  
+        </article>
+
+
+
+      </div>
+    </div>
+
+</body>
+</html>
