@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
@@ -66,7 +67,7 @@
                                 <div class="section-block" style='text-align: justify;'>
                                     <p>
                                     <ol class="list">
-                                      {% for pattern in patterns %}
+                                      {% for pattern in patterns_tag %}
                                        <li> <a href='/pattern/{{pattern.id}}'> {{pattern.name}} </a></li>
                                     {% endfor %}
                                     </ol>
@@ -124,4 +125,3 @@
 
 </body>
 </html> 
-

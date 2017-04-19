@@ -5,3 +5,4 @@ from patterns.models import *
 admin.site.register(Pattern)
 admin.site.register(Tag)
 admin.site.register(Gist)
+
