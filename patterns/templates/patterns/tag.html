@@ -95,7 +95,7 @@
                                     <ul class="nav doc-sub-menu">
 
                                         {% for tag in tags %}
-                                        <li><a  href="tag/{{tag.id}}"> {{tag.name}} </a></li>
+                                        <li><a  href="/tag/{{tag.id}}"> {{tag.name}} </a></li>
                                         {% endfor %}
                                     </ul><!--//nav-->
                                 </li>
@@ -110,10 +110,7 @@
        
         
     </div><!--//page-wrapper-->
-    
-    <footer id="footer" class="footer text-center">
-    </footer><!--//footer-->
-    
+
 
     <!-- Main Javascript -->          
     <script type="text/javascript" src="{% static 'patterns/plugins/jquery-1.12.3.min.js' %}"></script>

@@ -78,25 +78,24 @@
                                 </div>
                             </section><!--//doc-section-->
                             <section id="installation-section" class="doc-section">
-                                <h2 class="section-title">Implementation</h2>
+                                <!-- <h2 class="section-title">Implementation</h2>
                                 <div id="step1" class="section-block">
                                 	<p style='text-align: justify;'>
 										{{pattern.implementation}}
                                     </p>
-
+-->
 
                              	   	<h3 class="block-title">UML</h3>
-                             	    <img  class='UML' src="{% static 'patterns/images/adapterPattern.jpg' %}"">
+                             	    <img  class='UML' src="{{pattern.uml}}">
                              	    <br> <br>
                              	  	<h3 class="block-title">Code Implementation</h3>
-										<script src="{{pattern.gists}}"></script>
-                                        <script src="https://gist.github.com/MMartinDaniel/71c47138819c6aa879537c27d0dec7bb.js"></script>
+										<script src="{{pattern.gists.url}}"></script>
 
-                                    <br> <br>
+                                    <br> <br><!--
                              	  	<h3 class="block-title">Output</h3>
                                      <p style='text-align: justify;'>
 										{{pattern.output}}
-                                    </p>
+                                    </p> -->
                                 </div><!--//section-block-->
                                 <div id="step3"  class="section-block">
                                   
@@ -104,9 +103,10 @@
                             </section><!--//doc-section-->
                             <section id="download-section" class="doc-section">
                                 <div class="section-block">
+                                    <h2 class="block-title">Tags</h2>
                                    <ul class="taglist">
-                                      {% for tag in tags %}
-                                        <li><div class="tag selected green"><a style='color:white;' href="tag/{{tag.id}}"> {{tag.name}} </a></div></li>
+                                      {% for tag in pattern.tags.all %}
+                                        <li><div class="tag selected green"><a style='color:white;' href="/tag/{{tag.id}}"> {{tag.name}} </a></div></li>
                                       {% endfor %}                                                  
                                     </ul>
 
@@ -118,12 +118,12 @@
                     <div class="doc-sidebar hidden-xs">
                         <nav id="doc-nav">
                             <ul id="doc-menu" class="nav doc-menu" data-spy="affix">
-                                <li><a class="scrollto" href="#download-section">Design Pattern</a></li>
+                                <br><br><br><br><br><br><br>
                                 <li>
                                     <a class="scrollto" href="#code-section">Patterns</a>
                                     <ul class="nav doc-sub-menu">
                                         {% for pattern in patterns %}
-                                        <li><a href="pattern/{{pattern.id}}"> {{pattern}} </a></li>
+                                        <li><a href="{{pattern.id}}"> {{pattern}} </a></li>
                                         {% endfor %}  
                                     </ul><!--//nav-->
                                 </li>
@@ -132,7 +132,7 @@
                                     <ul class="nav doc-sub-menu">
 
                                         {% for tag in tags %}
-                                        <li><a  href="tag/{{tag.id}}"> {{tag.name}} </a></li>
+                                        <li><a  href="/tag/{{tag.id}}"> {{tag.name}} </a></li>
                                         {% endfor %}
                                     </ul><!--//nav-->
                                 </li>

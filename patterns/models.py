@@ -12,11 +12,11 @@ class Tag(models.Model):
 
 
 class Gist(models.Model):
-    name = models.CharField(max_length=100000)
+    name = models.CharField(max_length=1000)
     url = models.CharField(max_length=100000)
 
     def __str__(self):
-        return self.url
+        return self.name
 
 
 class Pattern(models.Model):
